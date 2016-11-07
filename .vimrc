@@ -26,9 +26,12 @@ noremap <Right> <NOP>
 
 let NERDTreeIgnore = ['\.swp$']
 
-set background=dark
-" monokai options
-let g:monokai_visibility = "high"
-let g:monokai_contrast = "high"
-let g:monokai_termcolors = 256
+syntax enable
 colorscheme monokai
+"Fix the goddamn monokai color problem where the nontext area has a different
+"color than the text color. See below. It is color 235 (of 256 colors) and
+"that is the same as the text background color. The highlight feature enables
+"you to change colors for various segments of VIM.
+highlight NonText ctermbg=233
+highlight Normal ctermbg=233
+
