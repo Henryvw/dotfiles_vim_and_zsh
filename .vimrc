@@ -35,3 +35,7 @@ colorscheme monokai
 highlight NonText ctermbg=233
 highlight Normal ctermbg=233
 
+"Backspace problems
+:fixdel
+set backspace=2
+:let g:NERDTreeWinSize=24
