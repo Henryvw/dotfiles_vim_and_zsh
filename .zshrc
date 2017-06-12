@@ -1,3 +1,12 @@
+#$PATH needed for Rails
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#Below is old set up in BASH which fails in oh my zsh - http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
+#export PATH=$PATH:/usr/local/git/bin:/usr/local/sbin:/Users/Henryvw/.rvm/gems/ruby-2.3.1/bin:/Users/Henryvw/.rvm/gems/ruby-2.3.1@global/bin:/Users/Henryvw/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/local/git/bin:/Users/Henryvw/.rvm/bin
+
+#Sometimes "SUDO RVM" gives warnings, use "RVMSUDO" instead. The below is neeeded to fix something with RVMSUDO.
+export rvmsudo_secure_path=1
+
 # Path to your oh-my-zsh installation.
 
 # Set name of the theme to load.
@@ -77,5 +86,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#. {repository_root}/powerline/bindings/zsh/powerline.zsh#
+#The below is needed for the Oh My Zsh .zshrc resource file instead of using .bashrc. No idea why... somehow it's an issue for RVM. Otherwise you will get complaints like "Rails is not installed" etc.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
