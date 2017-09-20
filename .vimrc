@@ -1,4 +1,8 @@
-"Give Tagbar (plugin to show classes) a button
+"set nobackup
+"The above set nobackup tells VIM not to save Swapfiles. If VIM is crashing I
+"will now lose those files. I can also tell VIM to save them in a TMP
+"directory somewhere. I have commented it out because without Swapfiles it
+"appears that Ack no longer functions"
 nmap <F8> :TagbarToggle<CR>
 syntax on
 autocmd vimenter * NERDTree
@@ -39,3 +43,5 @@ highlight Normal ctermbg=233
 :fixdel
 set backspace=2
 :let g:NERDTreeWinSize=24
+
+set noswapfile

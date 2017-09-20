@@ -1,6 +1,6 @@
 #$PATH needed for Rails
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
+export EDITOR=vim
 #Below is old set up in BASH which fails in oh my zsh - http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
 #export PATH=$PATH:/usr/local/git/bin:/usr/local/sbin:/Users/Henryvw/.rvm/gems/ruby-2.3.1/bin:/Users/Henryvw/.rvm/gems/ruby-2.3.1@global/bin:/Users/Henryvw/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/local/git/bin:/Users/Henryvw/.rvm/bin
 
