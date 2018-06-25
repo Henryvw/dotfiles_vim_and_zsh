@@ -46,11 +46,12 @@ set backspace=2
 
 set noswapfile
 
+"Use Ag Silver Searcher with Ack, not sure how they interact but apparently
+"useful"
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 "Speed up Ctrl-P by linking it to Ag somehow"
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
