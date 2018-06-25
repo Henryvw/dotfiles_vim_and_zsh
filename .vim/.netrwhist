@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/Henryvw/workspace/finleaprepo-valendo-api/app/views/api/v1/products'
+let g:netrw_dirhist_2='/Users/henryvanwagenberg/Desktop/workspace/lead-manager-api/app/services'
+let g:netrw_dirhist_3='/Users/henryvanwagenberg/Desktop/workspace/lead-manager-api/app'
+let g:netrw_dirhist_4='/Users/henryvanwagenberg/Desktop/workspace/lead-manager-api/app/controllers'
+let g:netrw_dirhist_5='/Users/henryvanwagenberg/Desktop/workspace/lead-manager-api/app/controllers/api'
+let g:netrw_dirhist_6='/Users/henryvanwagenberg/Desktop/workspace/lead-manager-api/app/controllers/api/v1'

@@ -1,8 +1,9 @@
+fpath=(/usr/local/share/zsh-completions $fpath)
 #$PATH needed for Rails
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export EDITOR=vim
 #Below is old set up in BASH which fails in oh my zsh - http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
-#export PATH=$PATH:/usr/local/git/bin:/usr/local/sbin:/Users/Henryvw/.rvm/gems/ruby-2.3.1/bin:/Users/Henryvw/.rvm/gems/ruby-2.3.1@global/bin:/Users/Henryvw/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/local/git/bin:/Users/Henryvw/.rvm/bin
+#export PATH=$PATH:/usr/local/git/bin:/usr/local/sbin:/Users/henryvanwagenberg/.rvm/gems/ruby-2.3.1/bin:/Users/Henryvw/.rvm/gems/ruby-2.3.1@global/bin:/Users/Henryvw/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/local/git/bin:/Users/Henryvw/.rvm/bin
 
 #Sometimes "SUDO RVM" gives warnings, use "RVMSUDO" instead. The below is neeeded to fix something with RVMSUDO.
 export rvmsudo_secure_path=1
@@ -13,9 +14,10 @@ export rvmsudo_secure_path=1
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH=/Users/Henryvw/.oh-my-zsh
+export ZSH=/Users/henryvanwagenberg/.oh-my-zsh
 
 ZSH_THEME="agnoster"
+DEFAULT_USER="henryvanwagenberg"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -54,7 +56,6 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 
 # User configuration
 
@@ -88,3 +89,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #The below is needed for the Oh My Zsh .zshrc resource file instead of using .bashrc. No idea why... somehow it's an issue for RVM. Otherwise you will get complaints like "Rails is not installed" etc.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+plugins=(git git-extras git-flow colored-man colorize github virtualenv virtualenvwrapper brew osx zsh-syntax-highlighting npm)
+
