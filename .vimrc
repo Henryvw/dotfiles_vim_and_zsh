@@ -18,11 +18,12 @@ set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
 set expandtab
-let NERDTreeShowHidden=1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 let g:ctrlp_match_window = 'results:100' " overcome ctrl-p limit imposed by max height
+let g:ctrlp_show_hidden = 1
+
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -53,5 +54,5 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "Speed up Ctrl-P by linking it to Ag somehow"
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
