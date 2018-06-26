@@ -13,6 +13,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 au VimEnter *  NERDTree
+let NERDTreeShowHidden=1
 autocmd VimEnter * wincmd p
 set clipboard=unnamed
 set tabstop=2
