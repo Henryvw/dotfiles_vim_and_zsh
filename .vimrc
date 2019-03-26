@@ -5,16 +5,17 @@
 "appears that Ack no longer functions"
 nmap <F8> :TagbarToggle<CR>
 syntax on
-autocmd vimenter * NERDTree
+"Puts debugging - 'wtf' command will add 90s and show the call stack. This is
+"for debugging when you know WHERE the problem is but not how it's getting
+"called.
+nnoremap <C-e>wtf oputs "#" * 90<c-m>puts "Here's the callstack<c-m>"caller<c-m>puts "#" * 90<esc>
 set number
 execute pathogen#infect()
 filetype plugin indent on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
-au VimEnter *  NERDTree
-let NERDTreeShowHidden=1
-autocmd VimEnter * wincmd p
+autocmd vimenter * NERDTree
 set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
@@ -24,13 +25,14 @@ let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 let g:ctrlp_match_window = 'results:100' " overcome ctrl-p limit imposed by max height
 let g:ctrlp_show_hidden = 1
-
+let g:NERDTreeDirArrows=0
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 let NERDTreeIgnore = ['\.swp$']
+let NERDTreeShowHidden=1
 
 syntax enable
 colorscheme monokai

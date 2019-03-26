@@ -1,6 +1,11 @@
+#March 2019 Note: Apparently this file is NOT sym-linked with my actual bash profile. When I type "env" in my Bash/Terminal, it does NOT show variables / values assigned here. I need to add it to the local .bash_profile / .zshrc. **NOTE**
+
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 #$PATH needed for Rails
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#Problem with Spring loading and Puma Server in Rails with new OS X High Sierra, 2019. Could be that is no longer needed.
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export EDITOR=vim
 #Below is old set up in BASH which fails in oh my zsh - http://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm
 #export PATH=$PATH:/usr/local/git/bin:/usr/local/sbin:/Users/henryvanwagenberg/.rvm/gems/ruby-2.3.1/bin:/Users/Henryvw/.rvm/gems/ruby-2.3.1@global/bin:/Users/Henryvw/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin:/usr/local/git/bin:/Users/Henryvw/.rvm/bin
@@ -90,4 +95,3 @@ source $ZSH/oh-my-zsh.sh
 #The below is needed for the Oh My Zsh .zshrc resource file instead of using .bashrc. No idea why... somehow it's an issue for RVM. Otherwise you will get complaints like "Rails is not installed" etc.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 plugins=(git git-extras git-flow colored-man colorize github virtualenv virtualenvwrapper brew osx zsh-syntax-highlighting npm)
-
