@@ -46,7 +46,11 @@ highlight Normal ctermbg=233
 "Backspace problems
 :fixdel
 set backspace=2
-:let g:NERDTreeWinSize=24
+:let g:NERDTreeWinSize=22
+
+"Put VIM cursor into the edit-window rather than having it appear in the
+"NERDTree colum
+autocmd VimEnter * wincmd p
 
 set noswapfile
 
@@ -59,3 +63,6 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
+
+"Solves Mac Vim problem of ^G appearing in Nerdtree
+let g:NERDTreeNodeDelimiter = "\u00a0"
