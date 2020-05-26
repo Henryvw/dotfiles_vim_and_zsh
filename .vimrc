@@ -16,7 +16,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
-set clipboard=unnamed
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -66,3 +66,7 @@ endif
 
 "Solves Mac Vim problem of ^G appearing in Nerdtree
 let g:NERDTreeNodeDelimiter = "\u00a0"
+"Copy and Paste with the Clipboard
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+set clipboard=unnamed
